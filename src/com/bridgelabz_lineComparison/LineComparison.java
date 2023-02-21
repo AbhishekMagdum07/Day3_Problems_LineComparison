@@ -1,7 +1,7 @@
 package com.bridgelabz_lineComparison;
 
 import java.util.Scanner;
-public class CompareTwoLines {
+public class LineComparison {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Line 1 inputs :");
@@ -24,15 +24,14 @@ public class CompareTwoLines {
         double q2 = sc.nextDouble();
 
 
+        // double length = Math.sqrt((x2 - x1)*(x2-x1) + (y2 - y1)*(y2-y1));
         double length1 = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
         double length2 = Math.sqrt(Math.pow(p2 - p1, 2) + Math.pow(q2 - q1, 2));
 
-        if (length1 == length2) {
+        if(length1 == length2) {
             System.out.println("Two Lines are Equal.");
-        } else if (length1 > length2) {
-            System.out.println("Line 1 is greater than Line 2.");
-        } else {
-            System.out.println("Line 2 is greater than Line 1");
+        }else {
+            System.out.println("Two Lines are not Equal.");
         }
     }
 }
